@@ -1,0 +1,16 @@
+{
+  "name": "sub-package-testing2",
+  "version": "1.0.1",
+  "description": "Testing out GitHub packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": "https://github.com/noahmulfinger/package-testing",
+  "author": "Noah Mulfinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahmulfinger/package-testing/issues"
+  },
+  "homepage": "https://github.com/noahmulfinger/package-testing#readme"
+}
