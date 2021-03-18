@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 12
       - run: yarn install
-      - run:  yarn test
+      - run: yarn test
 
   publish-gpr-1:
     needs: build
@@ -25,10 +25,11 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: yarn install
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
       - run: cd sub-packages/package1 && yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          
+
   publish-gpr-2:
     needs: build
     runs-on: ubuntu-latest
@@ -39,6 +40,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: yarn install
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
       - run: cd sub-packages/package2 && yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
