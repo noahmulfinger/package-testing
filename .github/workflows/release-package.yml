@@ -26,7 +26,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: yarn install
       - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-      - run: cd sub-packages/package1 && yarn publish
+      - run: yarn publish sub-packages/package1
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
@@ -41,6 +41,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: yarn install
       - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-      - run: cd sub-packages/package2 && yarn publish
+      - run: yarn publish sub-packages/package2
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
