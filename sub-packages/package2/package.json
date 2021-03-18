@@ -1,6 +1,6 @@
 {
-  "name": "sub-package-testing2",
-  "version": "1.0.1",
+  "name": "@noahmulfinger/sub-package-testing2",
+  "version": "1.0.0",
   "description": "Testing out GitHub packages",
   "main": "index.js",
   "scripts": {

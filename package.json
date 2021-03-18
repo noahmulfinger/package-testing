@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "Testing out GitHub packages",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "exit 0"
   },
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/noahmulfinger/package-testing/issues"
   },
-  "homepage": "https://github.com/noahmulfinger/package-testing#readme"
+  "homepage": "https://github.com/noahmulfinger/package-testing#readme",
+  "workspaces": [
+    "sub-packages/*"
+  ]
 }
