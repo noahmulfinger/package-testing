@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/noahmulfinger/package-testing/issues"
   },
-  "homepage": "https://github.com/noahmulfinger/package-testing#readme",
-  "workspaces": [
-    "sub-packages/*"
-  ]
+  "homepage": "https://github.com/noahmulfinger/package-testing#readme"
 }
